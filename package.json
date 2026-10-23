@@ -1,0 +1,47 @@
+{
+  "name": "mayek-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A Meetei Mayek typing studio",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "desktop": "vite build && electron-builder --win portable",
+    "desktop:open": "electron ."
+  },
+  "dependencies": {
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.15.3",
+    "vite": "^8.3.5"
+  },
+  "build": {
+    "appId": "com.mayek.studio",
+    "productName": "Mayek Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}

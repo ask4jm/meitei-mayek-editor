@@ -1,0 +1,29 @@
+<script setup>
+import { computed, nextTick, ref, watch } from 'vue'
+const text = ref(localStorage.getItem('mayek-draft') || '')
+const editor = ref(null), light = ref(false), notice = ref(''), expanded = ref(false)
+const lastRomanKey = ref(''), lastRomanTime = ref(0)
+const consonants = [['k','ꯀ'],['s','ꯁ'],['l','ꯂ'],['m','ꯃ'],['p','ꯄ'],['n','ꯅ'],['c','ꯆ'],['t','ꯇ'],['K','ꯈ'],['ng','ꯉ'],['T','ꯊ'],['w','ꯋ'],['y','ꯌ'],['h','ꯍ'],['U','ꯎ'],['I','ꯏ'],['f','ꯐ'],['E','ꯑ'],['g','ꯒ'],['J','ꯓ'],['r','ꯔ'],['b','ꯕ'],['j','ꯖ'],['d','ꯗ'],['G','ꯘ'],['D','ꯙ'],['B','ꯚ']]
+const vowels = [['o','ꯣ'],['i','ꯤ'],['a','ꯥ'],['e','ꯦ'],['ou','ꯧ'],['u','ꯨ'],['ei','ꯩ']]
+const signs = ['ꯪ','꯫','꯬'], digits = [...'0123456789'].map((n,i)=>[n,String.fromCodePoint(0xABF0+i)])
+const count = computed(()=>[...text.value].length)
+watch(text,v=>localStorage.setItem('mayek-draft',v))
+function insert(g){const el=editor.value;if(!el){text.value+=g;return}const a=el.selectionStart,b=el.selectionEnd;const isVowelSign=vowels.some(([,sign])=>sign===g);const previous=[...text.value.slice(0,a)].at(-1);if(isVowelSign&&(!previous||/\s/.test(previous))){ping('Add a consonant first, then choose a vowel sign');el.focus();return}text.value=text.value.slice(0,a)+g+text.value.slice(b);nextTick(()=>{el.focus();el.setSelectionRange(a+g.length,a+g.length)})}
+function keydown(e){if(e.ctrlKey||e.metaKey||e.altKey||e.key.length!==1){lastRomanKey.value='';return}const el=editor.value;const caret=el?.selectionStart??text.value.length;const digraphs={g:{prefix:'n',before:'ꯅ',glyph:'ꯉ'},u:{prefix:'o',before:'ꯣ',glyph:'ꯧ'},i:{prefix:'e',before:'ꯦ',glyph:'ꯩ'}};const pair=digraphs[e.key.toLowerCase()];if(pair&&lastRomanKey.value===pair.prefix&&Date.now()-lastRomanTime.value<900&&text.value.slice(0,caret).endsWith(pair.before)){e.preventDefault();const start=caret-1;text.value=text.value.slice(0,start)+pair.glyph+text.value.slice(caret);lastRomanKey.value='';nextTick(()=>{el.focus();el.setSelectionRange(start+1,start+1)});return}const found=[...consonants,...vowels,...digits].find(([k])=>k===e.key);if(found){e.preventDefault();insert(found[1]);lastRomanKey.value=e.key.toLowerCase();lastRomanTime.value=Date.now()}else lastRomanKey.value=''}
+function ping(s){notice.value=s;setTimeout(()=>notice.value='',2000)}
+async function copy(){try{await navigator.clipboard.writeText(text.value);ping('Copied to clipboard')}catch{editor.value.select();document.execCommand('copy');ping('Copied to clipboard')}}
+function save(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text.value],{type:'text/plain;charset=utf-8'}));a.download='meetei-mayek.txt';a.click();URL.revokeObjectURL(a.href);ping('Your text is downloaded')}
+function load(e){const f=e.target.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>{text.value=String(r.result||'');ping('Document opened')};r.readAsText(f);e.target.value=''}
+</script>
+<template>
+<main class="app" :class="{'day':light,'wide':expanded}">
+ <header class="nav"><a class="logo" href="#"><span class="seal">ꯃ</span><span>mayek<span class="dot">.</span><small>WRITING STUDIO</small></span></a><div class="nav-right"><span class="status"><i></i> YOUR WORKSPACE</span><button class="theme" @click="light=!light"><span>{{light?'☾':'☼'}}</span> {{light?'Night':'Day'}} mode</button></div></header>
+ <section class="compose"><div class="compose-head"><div><span class="eyebrow">01 — COMPOSE</span><span class="draft"><i></i> Autosaved</span></div><button class="expand" @click="expanded=!expanded">{{expanded?'↙':'↗'}} {{expanded?'Collapse':'Focus mode'}}</button></div><div class="editor"><div class="margin-mark">{{String(count).padStart(2,'0')}}</div><textarea ref="editor" v-model="text" @keydown="keydown" placeholder="Begin with a thought…" aria-label="Meetei Mayek text editor" spellcheck="false"></textarea><div class="editor-bottom"><span>Unicode text · Ready to share anywhere</span><span>{{count}} characters</span></div></div><div class="actions"><div class="action-left"><button @click="copy"><b>▢</b> Copy text</button><button @click="save"><b>↓</b> Download</button><label class="upload"><b>＋</b> Open file<input type="file" accept=".txt,text/plain" @change="load"></label></div><button class="clear" @click="text=''">Clear page <span>↗</span></button></div></section>
+ <section class="keyboard"><div class="key-head"><div><span class="eyebrow">02 — CHARACTER BOARD</span><h2>Build your script<span>.</span></h2></div><div class="key-note"><span class="key-hint">⌨</span><span>Tap a character<br>to add it above</span></div></div>
+ <div class="board"><div class="row-title"><span>CONSONANTS</span><i></i><small>Meetei Mayek letters</small></div><div class="keys consonants"><button v-for="([roman,glyph],i) in consonants" :key="glyph" class="key" @click="insert(glyph)" :aria-label="roman+' '+glyph"><span class="roman">{{roman}}</span><span class="glyph">{{glyph}}</span></button></div>
+ <div class="lower-board"><div class="key-group"><div class="row-title"><span>VOWEL SIGNS</span><i></i><small>Choose a consonant first</small></div><div class="keys vowels"><button v-for="([roman,glyph]) in vowels" :key="glyph" class="key" @click="insert(glyph)"><span class="roman">{{roman}}</span><span class="glyph">{{glyph}}</span></button></div><div class="keys signs"><button v-for="g in signs" :key="g" class="key sign" @click="insert(g)"><span class="glyph">{{g}}</span></button></div></div><div class="key-group number-group"><div class="row-title"><span>NUMERALS</span><i></i></div><div class="keys numbers"><button v-for="([n,g]) in digits" :key="n" class="key" @click="insert(g)"><span class="roman">{{n}}</span><span class="glyph">{{g}}</span></button></div></div></div>
+ </div></section>
+ <footer><span><b>ꯃ</b> Made with care for Meetei Mayek</span><span>MEETEI MAYEK · UNICODE</span></footer>
+ <Transition><div v-if="notice" class="toast">{{notice}}</div></Transition>
+</main>
+</template>
