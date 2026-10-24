@@ -4,7 +4,8 @@ A small Meetei Mayek typing studio built with Vue 3, Vite, and Electron. Use the
 
 ## Features
 
-- Meetei Mayek consonants, vowel signs, punctuation marks, and numerals on an on-screen keyboard
+- Meetei Mayek and Manipuri Bengali character boards with vowels, consonants, vowel signs, conjuncts, and numerals
+- Bengali-to-Meetei Mayek transliteration with a local, editable word dictionary
 - Phonetic typing shortcuts, including `ng`, `ou`, and `ei`
 - Automatic draft saving in the browser or desktop app
 - Copy text, download as a UTF-8 text file, and open a plain text file
@@ -29,7 +30,9 @@ Open the local URL printed by Vite.
 
 ## Typing
 
-Click in the editor, then either type a mapped key or choose a key from the character board. The on-screen roman labels show the typing shortcuts. For example, type `ng` to enter `ꯉ`, `ou` for `ꯧ`, and `ei` for `ꯩ`.
+Choose Meetei Mayek or Manipuri Bengali above the character board. Click in the editor, then either type a mapped key or choose a key from the board. For Meetei Mayek, type `ng` to enter `ꯉ`, `ou` for `ꯧ`, and `ei` for `ꯩ`. Bengali mode uses the Avro Phonetic key sequences shown on the board (for example, `ami` → `আমি` and `bangla` → `বাংলা`); brief pauses resolve keys that can start a longer sequence. The Bengali board includes common conjuncts for quick entry.
+
+Open the **Transliterate** tab to convert Bengali text to Meetei Mayek. Add custom source/target word pairs in the Dictionary editor; custom matches are applied before character-by-character conversion and are saved locally in the browser or app profile.
 
 Vowel signs are dependent marks. Enter a consonant first, then enter its vowel sign. Typing `a` enters the sign `ꯥ`. On-screen buttons can also be used to enter characters. Use Copy text, Download, or Open file to move text in and out of the app.
 

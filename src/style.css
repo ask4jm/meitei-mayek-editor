@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Noto+Sans+Meetei+Mayek:wght@400;500;600&display=swap');
-:root{font-family:'DM Sans',sans-serif;color:#f1eee6;background:#191917;font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}body{margin:0;min-width:320px;background:#191917}.app{max-width:1440px;margin:auto;min-height:100vh;padding:0 7.1% 24px;background:#191917;color:#f1eee6;transition:.25s}.nav{height:76px;border-bottom:1px solid #33322e;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;gap:11px;align-items:center;text-decoration:none;color:inherit;font-weight:700;font-size:20px;letter-spacing:-.7px}.logo small{display:block;font:8px 'DM Mono',monospace;letter-spacing:1.7px;color:#818078;margin-top:2px}.seal{font:26px 'Noto Sans Meetei Mayek';color:#e7797c;border:1px solid #594042;border-radius:50%;width:37px;height:37px;display:grid;place-items:center}.dot{color:#e7797c}.nav-right{display:flex;align-items:center;gap:24px}.status,.eyebrow,.overline,.row-title>span,footer>span:last-child{font:9px 'DM Mono',monospace;letter-spacing:1.35px;color:#85837b}.status i,.draft i{display:inline-block;width:6px;height:6px;background:#9cb992;border-radius:50%;margin-right:7px}.theme,.expand{font:11px 'DM Sans';color:#b1aea5;background:transparent;border:0;cursor:pointer}.theme span{font-size:17px;color:#e7797c;vertical-align:-2px;margin-right:5px}.hero{padding:44px 0 34px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #33322e}.overline{color:#d28f86}.hero h1{font:500 41px/1.15 'Playfair Display',serif;letter-spacing:-1px;margin:11px 0 8px}.hero h1 em{color:#e7797c}.hero p{color:#a19e95;font-size:13px;margin:0}.hero-script{font:52px 'Noto Sans Meetei Mayek',sans-serif;color:#37332f;transform:rotate(-4deg);padding-right:7%}.compose{padding-top:26px}.compose-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.compose-head>div{display:flex;align-items:center;gap:18px}.draft{font-size:10px;color:#89877e}.draft i{width:5px;height:5px}.expand{color:#96938b}.editor{position:relative;background:#ece8dc;color:#272622;border-radius:4px;box-shadow:0 8px 30px #0002;overflow:hidden;padding:21px 24px 0 57px}.margin-mark{position:absolute;left:20px;top:25px;font:10px 'DM Mono',monospace;color:#b2ada0}.editor textarea{display:block;width:100%;height:174px;resize:vertical;background:transparent;border:0;outline:0;color:#282720;font:24px/1.8 'Noto Sans Meetei Mayek',sans-serif;caret-color:#be615f}.editor textarea::placeholder{font:italic 20px 'Playfair Display',serif;color:#aaa498}.editor-bottom{height:34px;border-top:1px solid #d5d0c3;display:flex;justify-content:space-between;align-items:center;color:#969184;font:9px 'DM Mono',monospace}.actions{display:flex;justify-content:space-between;align-items:center;padding:12px 1px 25px}.action-left{display:flex;gap:8px}.actions button,.upload{font:11px 'DM Sans';cursor:pointer;border:1px solid #41403a;border-radius:3px;padding:8px 12px;background:#22221f;color:#d4d0c8;transition:.16s}.actions button:hover,.upload:hover{border-color:#d9807b;color:white}.actions b,.upload b{font-size:14px;color:#df817d;margin-right:5px}.upload{display:inline-flex;align-items:center}.upload input{display:none}.actions .clear{background:transparent;border-color:transparent;color:#a09d93}.clear span{color:#e7797c;margin-left:7px}.key-head{display:flex;align-items:end;justify-content:space-between;margin:2px 0 15px}.key-head h2{font:500 22px 'Playfair Display',serif;margin:5px 0 0}.key-head h2 span{color:#e7797c}.key-note{display:flex;align-items:center;gap:9px;color:#89877e;font-size:10px;line-height:1.5}.key-hint{font-size:17px;color:#e7797c}.board{background:#201f1c;border:1px solid #34332f;border-radius:5px;padding:17px 19px 19px}.row-title{display:flex;align-items:center;gap:10px;margin:1px 0 12px}.row-title>span{font-size:8px;color:#c3827b}.row-title i{height:1px;flex:1;background:#363530}.row-title small{font-size:9px;color:#77756e}.keys{display:grid;gap:7px}.consonants{grid-template-columns:repeat(14,minmax(0,1fr))}.key{height:55px;position:relative;background:#292824;border:1px solid #41403a;border-radius:3px;cursor:pointer;display:grid;place-items:center;transition:background .13s,transform .13s,border-color .13s}.key:hover{background:#35302b;border-color:#dd7977;transform:translateY(-2px)}.roman{position:absolute;top:4px;left:6px;font:8px 'DM Mono',monospace;color:#89867d}.glyph{font:23px 'Noto Sans Meetei Mayek',sans-serif;color:#e7797c;line-height:1}.lower-board{display:grid;grid-template-columns:1fr 1.15fr;gap:34px;margin:21px auto 0;max-width:790px}.vowels{grid-template-columns:repeat(7,1fr)}.vowels .key,.numbers .key{height:52px}.signs{grid-template-columns:repeat(3,43px);justify-content:center;margin-top:8px}.sign{height:37px}.sign .glyph{font-size:19px}.numbers{grid-template-columns:repeat(10,1fr)}footer{display:flex;justify-content:space-between;align-items:center;padding-top:24px;color:#77756e;font-size:10px}footer b{font:17px 'Noto Sans Meetei Mayek';color:#d87878;vertical-align:-2px;margin-right:6px}.wide .editor textarea{height:45vh}.day{background:#f2eee5;color:#272621}.day .nav,.day .hero{border-color:#d8d3c8}.day .hero p,.day .status{color:#706e67}.day .board{background:#e7e1d5;border-color:#d1cabe}.day .key{background:#f5f1e9;border-color:#d2ccbf}.day .key:hover{background:#fff8f4}.day .row-title i{background:#d5cfc3}.day .actions button,.day .upload{background:#e6e1d7;color:#45433d;border-color:#d1cabe}.day .actions .clear{background:transparent;border-color:transparent}.day .expand,.day .theme{color:#55534d}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#ece8dc;color:#282720;padding:11px 17px;border-radius:4px;font-size:12px;box-shadow:0 5px 22px #0005}.v-enter-active,.v-leave-active{transition:opacity .15s}.v-enter-from,.v-leave-to{opacity:0}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600&display=swap');
+:root{font-family:'DM Sans',sans-serif;color:#f1eee6;background:#191917;font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}body{margin:0;min-width:320px;background:#191917}.app{max-width:1440px;margin:auto;min-height:100vh;padding:0 7.1% 24px;background:#191917;color:#f1eee6;transition:.25s}.nav{height:76px;border-bottom:1px solid #33322e;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;gap:11px;align-items:center;text-decoration:none;color:inherit;font-weight:700;font-size:20px;letter-spacing:-.7px}.logo small{display:block;font:8px 'DM Mono',monospace;letter-spacing:1.7px;color:#818078;margin-top:2px}.seal{font:26px 'Noto Sans Meetei Mayek';color:#e7797c;border:1px solid #594042;border-radius:50%;width:37px;height:37px;display:grid;place-items:center}.dot{color:#e7797c}.nav-right{display:flex;align-items:center;gap:24px}.status,.eyebrow,.overline,.row-title>span,footer>span:last-child{font:9px 'DM Mono',monospace;letter-spacing:1.35px;color:#85837b}.status i,.draft i{display:inline-block;width:6px;height:6px;background:#9cb992;border-radius:50%;margin-right:7px}.theme,.expand{font:11px 'DM Sans';color:#b1aea5;background:transparent;border:0;cursor:pointer}.theme span{font-size:17px;color:#e7797c;vertical-align:-2px;margin-right:5px}.hero{padding:44px 0 34px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #33322e}.overline{color:#d28f86}.hero h1{font:500 41px/1.15 'Playfair Display',serif;letter-spacing:-1px;margin:11px 0 8px}.hero h1 em{color:#e7797c}.hero p{color:#a19e95;font-size:13px;margin:0}.hero-script{font:52px 'Noto Sans Meetei Mayek',sans-serif;color:#37332f;transform:rotate(-4deg);padding-right:7%}.compose{padding-top:26px}.compose-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.compose-head>div{display:flex;align-items:center;gap:18px}.draft{font-size:10px;color:#89877e}.draft i{width:5px;height:5px}.expand{color:#96938b}.editor{position:relative;background:#ece8dc;color:#272622;border-radius:4px;box-shadow:0 8px 30px #0002;overflow:hidden;padding:21px 24px 0 57px}.margin-mark{position:absolute;left:20px;top:25px;font:10px 'DM Mono',monospace;color:#b2ada0}.editor textarea{display:block;width:100%;height:174px;resize:vertical;background:transparent;border:0;outline:0;color:#282720;font:24px/1.8 'Noto Sans Meetei Mayek',sans-serif;caret-color:#be615f}.editor textarea::placeholder{font:italic 20px 'Playfair Display',serif;color:#aaa498}.editor-bottom{height:34px;border-top:1px solid #d5d0c3;display:flex;justify-content:space-between;align-items:center;color:#969184;font:9px 'DM Mono',monospace}.actions{display:flex;justify-content:space-between;align-items:center;padding:12px 1px 25px}.action-left{display:flex;gap:8px}.actions button,.upload{font:11px 'DM Sans';cursor:pointer;border:1px solid #41403a;border-radius:3px;padding:8px 12px;background:#22221f;color:#d4d0c8;transition:.16s}.actions button:hover,.upload:hover{border-color:#d9807b;color:white}.actions b,.upload b{font-size:14px;color:#df817d;margin-right:5px}.upload{display:inline-flex;align-items:center}.upload input{display:none}.actions .clear{background:transparent;border-color:transparent;color:#a09d93}.clear span{color:#e7797c;margin-left:7px}.key-head{display:flex;align-items:end;justify-content:space-between;margin:2px 0 15px}.key-head h2{font:500 22px 'Playfair Display',serif;margin:5px 0 0}.key-head h2 span{color:#e7797c}.key-note{display:flex;align-items:center;gap:9px;color:#89877e;font-size:10px;line-height:1.5}.key-hint{font-size:17px;color:#e7797c}.board{background:#201f1c;border:1px solid #34332f;border-radius:5px;padding:17px 19px 19px}.row-title{display:flex;align-items:center;gap:10px;margin:1px 0 12px}.row-title>span{font-size:8px;color:#c3827b}.row-title i{height:1px;flex:1;background:#363530}.row-title small{font-size:9px;color:#77756e}.keys{display:grid;gap:7px}.consonants{grid-template-columns:repeat(14,minmax(0,1fr))}.key{height:55px;position:relative;background:#292824;border:1px solid #41403a;border-radius:3px;cursor:pointer;display:grid;place-items:center;transition:background .13s,transform .13s,border-color .13s}.key:hover{background:#35302b;border-color:#dd7977;transform:translateY(-2px)}.roman{position:absolute;top:4px;left:6px;font:8px 'DM Mono',monospace;color:#89867d}.glyph{font:23px 'Noto Sans Meetei Mayek',sans-serif;color:#e7797c;line-height:1}.lower-board{display:grid;grid-template-columns:1fr 1.15fr;gap:34px;margin:21px auto 0;max-width:790px}.vowels{grid-template-columns:repeat(7,1fr)}.vowels .key,.numbers .key{height:52px}.signs{grid-template-columns:repeat(4,43px);justify-content:center;margin-top:8px}.sign{height:37px}.sign .glyph{font-size:19px}.numbers{grid-template-columns:repeat(10,1fr)}footer{display:flex;justify-content:space-between;align-items:center;padding-top:24px;color:#77756e;font-size:10px}footer b{font:17px 'Noto Sans Meetei Mayek';color:#d87878;vertical-align:-2px;margin-right:6px}.wide .editor textarea{height:45vh}.day{background:#f2eee5;color:#272621}.day .nav,.day .hero{border-color:#d8d3c8}.day .hero p,.day .status{color:#706e67}.day .board{background:#e7e1d5;border-color:#d1cabe}.day .key{background:#f5f1e9;border-color:#d2ccbf}.day .key:hover{background:#fff8f4}.day .row-title i{background:#d5cfc3}.day .actions button,.day .upload{background:#e6e1d7;color:#45433d;border-color:#d1cabe}.day .actions .clear{background:transparent;border-color:transparent}.day .expand,.day .theme{color:#55534d}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#ece8dc;color:#282720;padding:11px 17px;border-radius:4px;font-size:12px;box-shadow:0 5px 22px #0005}.v-enter-active,.v-leave-active{transition:opacity .15s}.v-enter-from,.v-leave-to{opacity:0}
 @media(max-width:900px){.app{padding-left:4%;padding-right:4%}.consonants{grid-template-columns:repeat(9,minmax(0,1fr))}.lower-board{gap:20px}.hero-script{padding-right:2%}}
 @media(max-width:600px){.app{padding:0 17px 20px}.nav{height:65px}.status{display:none}.nav-right{gap:8px}.hero{padding:32px 0 25px}.hero h1{font-size:33px}.hero-script{font-size:34px;padding:0}.hero p{max-width:240px;line-height:1.5}.editor{padding:18px 13px 0 38px}.editor textarea{height:155px;font-size:21px}.margin-mark{left:12px;top:22px}.editor-bottom{font-size:8px}.action-left{gap:5px}.actions button,.upload{padding:8px 8px;font-size:10px}.actions .clear{padding:6px 1px}.board{padding:13px 11px}.consonants{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.key{height:53px}.lower-board{grid-template-columns:1fr;gap:18px;margin-top:17px}.numbers{grid-template-columns:repeat(5,1fr)}.footer{font-size:9px}footer>span:last-child{font-size:8px}}
 
@@ -45,6 +46,129 @@ footer{padding-top:33px;color:#77766c}footer b{color:#bd625a}
  footer{padding-top:17px}
 }
 
+.script-switch{display:flex;padding:4px;background:#35342e;border:1px solid #514e44;border-radius:24px;gap:3px}
+.key-head{align-items:center;justify-content:flex-start;gap:14px}
+.key-head>.keyboard-title{display:flex;align-items:baseline;gap:12px;white-space:nowrap;flex:0 0 auto}
+.key-head h2{margin:0}
+.key-head .toolbar-actions{padding:0;margin:0;flex:0 0 auto}
+.key-head .toolbar-actions .action-left{gap:6px}
+.key-head>.clear{margin-left:auto;padding:7px 8px;border:0;background:transparent;color:#c2bcaf;font:11px 'DM Sans';white-space:nowrap;cursor:pointer}
+.page-tabs{display:flex;align-items:center;gap:4px;padding:4px;border:1px solid #514e44;border-radius:24px;background:#35342e;flex-shrink:0}
+.page-tabs button{border:0;border-radius:18px;background:transparent;color:#d0cabc;font:11px 'DM Sans';padding:8px 13px;cursor:pointer}
+.page-tabs button.selected{background:#e58a79;color:#292823;font-weight:700}
+.transliterator{padding:24px 0 20px}
+.translit-heading{margin-bottom:18px}
+.translit-heading h1{font:500 30px 'Playfair Display',serif;color:#f1ece2;margin:6px 0}
+.translit-heading h1 span{color:#e58a79}
+.translit-heading p,.dictionary-heading p,.dictionary-empty{color:#c2bcad;font-size:12px;margin:0}
+.translit-panels{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.translit-panel{display:flex;flex-direction:column;gap:8px;min-width:0;color:#ded8cc;font-size:12px}
+.translit-panel textarea{width:100%;height:clamp(220px,34vh,420px);min-height:150px;max-height:70vh;resize:vertical;padding:20px;background:#e5e0d4;border:1px solid #bdb6a7;border-radius:6px;color:#282720;font:24px/1.8 'Noto Sans Bengali','Noto Sans Meetei Mayek',sans-serif;outline-color:#d88876}
+.translit-panel:nth-child(2) textarea{font-family:'Noto Sans Meetei Mayek','Noto Sans Bengali',sans-serif}
+.dictionary-editor{margin-top:22px;padding:18px;background:#33322c;border:1px solid #4a483f;border-radius:6px}
+.dictionary-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.dictionary-heading h2{font:500 21px 'Playfair Display',serif;color:#f1ece2;margin:4px 0 0}
+.dictionary-count{display:inline-block;margin-left:7px;padding:3px 7px;border:1px solid #58554b;border-radius:10px;color:#c2bcad;font:10px 'DM Mono',monospace;vertical-align:3px}
+.dictionary-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.dictionary-toggle{display:flex;align-items:center;gap:8px;color:#ded8cc;font-size:12px;cursor:pointer}
+.dictionary-toggle input{accent-color:#e58a79;width:15px;height:15px}
+.dictionary-export{padding:8px 11px;background:#292823;border:1px solid #58554b;border-radius:4px;color:#f1ece2;font:11px 'DM Sans';cursor:pointer}
+.dictionary-export:hover{border-color:#e58a79;color:white}
+.dictionary-form{display:flex;align-items:end;gap:10px}
+.dictionary-form label{display:flex;flex:1;flex-direction:column;gap:6px;color:#d0cabc;font-size:11px}
+.dictionary-form input{min-width:0;padding:10px 11px;background:#292823;border:1px solid #58554b;border-radius:4px;color:#fffdf7;font:15px 'Noto Sans Bengali','Noto Sans Meetei Mayek',sans-serif;outline-color:#e58a79}
+.dictionary-form button{padding:10px 14px;background:#e58a79;border:0;border-radius:4px;color:#292823;font:600 12px 'DM Sans';cursor:pointer;white-space:nowrap}
+.dictionary-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:12px}
+.dictionary-entry{display:flex;align-items:center;gap:12px;padding:8px 10px;background:#292823;border-radius:4px;color:#f1ece2;font:14px 'Noto Sans Bengali','Noto Sans Meetei Mayek',sans-serif}
+.dictionary-entry b{color:#e58a79}.dictionary-entry button{margin-left:auto;border:0;background:transparent;color:#c2bcad;font-size:19px;cursor:pointer}
+.dictionary-empty{margin-top:12px}
+.dictionary-pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;color:#c2bcad;font-size:11px}
+.dictionary-pagination>div{display:flex;gap:7px}
+.dictionary-pagination button{padding:7px 10px;background:#292823;border:1px solid #58554b;border-radius:4px;color:#f1ece2;font:11px 'DM Sans';cursor:pointer}
+.dictionary-pagination button:disabled{opacity:.45;cursor:default}
+.nav{gap:18px}
+.nav .compose-head{flex:1;min-width:230px;margin:0 8px;align-items:center}
+.nav .compose-head>div{gap:12px;white-space:nowrap}
+.editor textarea.bengali-textarea{font-family:'Noto Sans Bengali','Noto Sans Meetei Mayek',sans-serif}
+.script-switch button{font:11px 'DM Sans';color:#d0cabc;background:transparent;border:0;border-radius:19px;padding:8px 12px;cursor:pointer}
+.script-switch button.selected{background:#e58a79;color:#292823;font-weight:700}
+.vowel-row{grid-template-columns:repeat(11,minmax(0,1fr));margin-bottom:16px}
+.board:not(.bengali-board)>.vowel-row{grid-template-columns:repeat(7,minmax(0,1fr));max-width:520px}
+.mayek-symbols{grid-template-columns:repeat(11,minmax(0,1fr))}
+.final-group{margin-top:18px}
+.final-keys{grid-template-columns:repeat(8,minmax(0,1fr));max-width:660px}
+.board:not(.bengali-board) .lower-board{max-width:none;width:100%;grid-template-columns:1.25fr 1fr}
+.bengali-keys{grid-template-columns:repeat(12,minmax(0,1fr))}
+.bengali-keys .roman{display:none}
+.bengali-keys .roman{display:block;font-size:8px;color:#d0c9b9}
+.bengali-keys .glyph,.conjuncts .glyph,.vowels .glyph{font-family:'Noto Sans Bengali','Noto Sans Meetei Mayek',sans-serif}
+.conjunct-group{margin-top:20px}
+.conjuncts{grid-template-columns:repeat(11,minmax(0,1fr))}
+.conjuncts .key{height:45px}
+.bengali-board{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(340px,1fr);grid-template-areas:"vowels conjunct-title" "cons-title conjunct-keys" "consonants conjunct-keys" "extras extra-title" "extras extra-keys";column-gap:20px;align-items:start}
+.bengali-board>.vowel-row{grid-area:vowels}
+.bengali-board>.row-title{grid-area:cons-title}
+.bengali-board>.consonants{grid-area:consonants}
+.bengali-board>.conjunct-group{display:contents}
+.bengali-board .conjunct-group>.row-title{grid-area:conjunct-title}
+.bengali-board .conjuncts{grid-area:conjunct-keys;align-self:start}
+.bengali-board>.extra-group{display:contents}
+.bengali-board .extra-group>.row-title{grid-area:extra-title}
+.bengali-board .extra-characters{grid-area:extra-keys;align-self:start;grid-template-columns:repeat(7,minmax(0,1fr))}
+.bengali-board .extra-characters .key{height:38px}
+.bengali-board .extra-characters .phala-key{height:38px;display:flex;align-items:center;justify-content:center;gap:5px;grid-column:span 2}
+.phala-label{font:10px 'Noto Sans Bengali',sans-serif;color:#e0dacc}
+.bengali-board>.lower-board{grid-area:extras;max-width:none;width:100%;grid-template-columns:1fr 1fr;gap:16px;margin:10px 0 0}
+.bengali-board .vowels{grid-template-columns:repeat(7,minmax(0,1fr))}
+.bengali-board .numbers{grid-template-columns:repeat(5,minmax(0,1fr))}
+.bengali-board .conjuncts{grid-template-columns:repeat(7,minmax(0,1fr))}
+.bengali-board .conjuncts .key{height:38px}
+.bengali-board .consonants{grid-template-columns:repeat(12,minmax(0,1fr))}
+@media(min-width:901px) and (max-height:1000px){
+ .app{padding-bottom:8px}
+ .nav{height:54px}
+ .compose{padding-top:12px}
+ .compose-head{margin-bottom:8px}
+ .editor{padding:10px 18px 0 48px}
+ .editor textarea,.wide .editor textarea{height:88px;min-height:60px;max-height:65vh;resize:vertical;font-size:21px}
+ .margin-mark{top:15px}
+ .editor-bottom{height:23px}
+ .actions{padding:7px 1px 12px}
+ .actions button,.upload{padding:8px 11px}
+ .keyboard{padding-bottom:4px}
+ .key-head{margin:0 0 8px}
+ .key-head h2{font-size:21px}
+ .board{padding:10px 12px}
+ .row-title{margin:0 0 6px;gap:7px}
+ .row-title small{font-size:8px}
+ .keys{gap:4px}
+ .key,.vowels .key,.numbers .key{height:39px}
+ .glyph{font-size:22px}
+ .roman{top:4px;left:5px;font-size:7px}
+ .vowel-row{margin-bottom:8px}
+ .conjunct-group{margin-top:10px}
+ .conjuncts .key{height:32px}
+ .bengali-board .conjuncts .key{height:33px}
+ .bengali-board .extra-characters .phala-key{height:33px}
+ .bengali-board>.lower-board{margin-top:8px;gap:10px}
+ .bengali-board .vowels{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .bengali-board .numbers{grid-template-columns:repeat(5,minmax(0,1fr))}
+ footer{padding-top:8px}
+}
+@media(max-width:900px){.bengali-keys{grid-template-columns:repeat(8,minmax(0,1fr))}.conjuncts{grid-template-columns:repeat(6,minmax(0,1fr))}.vowel-row{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:900px){.bengali-board{display:block}.bengali-board>.conjunct-group,.bengali-board>.extra-group{display:block}.bengali-board>.lower-board{display:grid;grid-template-columns:1fr;width:auto;margin:10px auto 0}.bengali-board .conjuncts{grid-template-columns:repeat(6,minmax(0,1fr))}.bengali-board .extra-characters{grid-template-columns:repeat(7,minmax(0,1fr))}.bengali-board .consonants{grid-template-columns:repeat(8,minmax(0,1fr))}}
+@media(max-width:900px){.nav{height:auto;min-height:54px;flex-wrap:wrap;padding:9px 0}.nav .compose-head{order:3;flex:1 0 100%;margin:2px 0 0}.nav .nav-right{margin-left:auto}}
+@media(max-width:1200px){.key-head{flex-wrap:wrap;gap:10px}.key-head>.clear{margin-left:auto}}
+@media(max-width:600px){.key-head{flex-wrap:wrap;gap:12px}.key-head>.keyboard-title{width:100%;justify-content:space-between;gap:8px;order:1}.key-head .toolbar-actions{order:2}.key-head .script-switch{order:3;flex:1}.key-head .key-note{order:4}.key-head>.clear{order:5;margin-left:auto}.key-head h2{font-size:20px}.script-switch{justify-content:center}.bengali-keys{grid-template-columns:repeat(5,minmax(0,1fr))}.conjuncts{grid-template-columns:repeat(4,minmax(0,1fr))}.vowel-row{grid-template-columns:repeat(4,minmax(0,1fr))}.bengali-board .consonants{grid-template-columns:repeat(5,minmax(0,1fr))}.bengali-board .conjuncts{grid-template-columns:repeat(4,minmax(0,1fr))}.bengali-board>.lower-board{grid-template-columns:1fr}}
+@media(max-width:900px){.board:not(.bengali-board) .lower-board{grid-template-columns:1fr}.mayek-symbols{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:600px){.final-keys{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:800px){.translit-panels{grid-template-columns:1fr}.translit-panel textarea{height:220px}.dictionary-heading{align-items:start;flex-direction:column}.dictionary-form{flex-wrap:wrap}.dictionary-form label{flex-basis:calc(50% - 6px)}.dictionary-form button{flex:1}}
+@media(max-width:800px){.dictionary-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.dictionary-form label{flex-basis:100%}.page-tabs button{padding:7px 9px}.translit-heading h1{font-size:25px}}
+@media(max-width:500px){.dictionary-list{grid-template-columns:1fr}}
+.day .page-tabs{background:#e8e3d9;border-color:#d2ccbf}.day .page-tabs button{color:#55534d}.day .page-tabs button.selected{background:#bd6e5d;color:#fffdf7}
+.day .translit-heading h1,.day .dictionary-heading h2{color:#30302a}.day .translit-heading p,.day .dictionary-heading p,.day .dictionary-empty{color:#706e67}.day .translit-panel{color:#4c4b44}.day .dictionary-editor{background:#e7e1d5;border-color:#d1cabe}.day .dictionary-form label,.day .dictionary-toggle{color:#55534d}.day .dictionary-form input,.day .dictionary-entry{background:#fffdf8;border-color:#d2ccbf;color:#282720}.day .dictionary-entry button{color:#55534d}.day .dictionary-export,.day .dictionary-pagination button{background:#fffdf8;border-color:#d2ccbf;color:#45433d}.day .dictionary-pagination{color:#706e67}.day .dictionary-count{border-color:#d2ccbf;color:#706e67}
+
 /* Warm charcoal background with a readable paper editor. */
 body{background:#292823}
 .app{background:#292823;color:#eeeae1}
@@ -89,4 +213,9 @@ footer{color:#c0baad}
 .logo small,.status,.row-title small,.draft,footer{color:#e0dacc}
 .hero p,.key-note,.expand,.roman{color:#ebe5d9}
 .eyebrow,.row-title>span,.overline{color:#ffb19c}
+.editor textarea{height:calc(clamp(112px,17vh,165px) + 7.2em);min-height:100px;max-height:85vh;resize:vertical}
+.wide .editor textarea{height:calc(45vh + 7.2em)}
+@media(min-width:901px) and (max-height:1000px){.editor textarea,.wide .editor textarea{height:calc(88px + 7.2em);min-height:100px;max-height:85vh;resize:vertical}}
+@media(max-width:900px){.editor textarea{height:calc(230px + 7.2em)}}
+@media(max-width:600px){.editor textarea,.wide .editor textarea{height:calc(190px + 7.2em)}}
 .editor-bottom{color:#655f53}
